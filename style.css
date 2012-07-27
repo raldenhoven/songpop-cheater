@@ -1,0 +1,11 @@
+body,html{ margin:0; padding:0 10px; font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif; color:#FFF;}
+  body { background:#3194d4 url(header.png) no-repeat 0 0; padding-top:100px; }
+  p{font-size:12px;}
+  a{color:#FFF; text-decoration:none;}
+  a:hover{ text-decoration:underline;}
+  .answers{ margin:0; padding:0; list-style:none;}
+  .answers li{ clear:both;line-height: 24px; margin-bottom: 5px; }
+  .selector{float:left; width:24px; height:24px; background:url(list-bg.png) no-repeat 0 0; margin-right:10px;}
+  .first{-webkit-transform: rotate(90deg);}
+  .second{-webkit-transform: rotate(270deg);}
+  .third{-webkit-transform: rotate(180deg);}
