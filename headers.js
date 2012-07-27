@@ -40,19 +40,9 @@ function onEvent(debuggeeId, message, params) {
           $(data['quiz']['questions']).each( function(){
             var question = this,
                 answerIndex = question['answerIndex'],
-                answer = question['songs'][answerIndex],
-                $selector = $('<div>').addClass(" selector"),
-                answerClass = 'default';
-            if(answerIndex == 1){
-              answerClass = 'first';
-            }else if( answerIndex == 2 ){
-              answerClass = 'second';
-            }else if( answerIndex == 3 ){
-              answerClass = 'third';
-            }
-            $selector.addClass( answerClass );
+                answer = question['songs'][answerIndex];
             $listItem = $('<li></li>');
-            $listItem.html(answer['artist'] + " - " + answer['title']).prepend($selector);
+            $listItem.html(answer['artist'] + " - " + answer['title']);
             $('.answers').append($listItem);
           });
         }
