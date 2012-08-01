@@ -31,7 +31,7 @@ function onEvent(debuggeeId, message, params) {
     }
 
     host = parseURL(params.request.url).host;
-    if( host.indexOf("appspot.com") != -1){
+    if( typeof host !== "undefined" && host.indexOf("appspot.com") != -1){
       // We found a Json request
       $.getJSON(params.request.url, function(data) {
         if( data.hasOwnProperty("quiz") ){

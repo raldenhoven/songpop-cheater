@@ -15,6 +15,6 @@
     "default_title": "SongPop Cheater"
   },
   "manifest_version": 2,
-  "content_security_policy": "default-src 'self'; style-src 'self'; script-src 'self' https://ssl.google-analytics.com; connect-src https://1-2-46-dot-wam-mobile.appspot.com; img-src 'self' http://www.google-analytics.com"
+  "content_security_policy": "default-src 'self'; style-src 'self'; script-src 'self' https://ssl.google-analytics.com; connect-src https://*.appspot.com; img-src 'self' http://www.google-analytics.com"
 }
 
