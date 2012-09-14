@@ -1,20 +1,30 @@
 {
-  "name": "SongPop Cheater",
-  "description": "Display's the songs you have to gues",
-  "version": "0.1",
-  "permissions": [
-    "tabs",
-    "debugger",
-    "<all_urls>"
-  ],
+  "name": "Songpop Cheater",
+  "version": "2.0",
+  "description": "Never Lose again in SongPop!",
+  "permissions": ["webRequest", "webRequestBlocking","contextMenus","tabs",
+		  "*://wam-mobile.appspot.com/facebook/canvas/",
+		  "*://*.appspot.com/quiz/get/*",
+		  "*://raldenhoven.nl/*"
+		 ],
   "background": {
     "scripts": ["background.js"]
   },
-  "browser_action": {
-    "default_icon": "icon.png",
-    "default_title": "SongPop Cheater"
-  },
-  "manifest_version": 2,
-  "content_security_policy": "default-src 'self'; style-src 'self'; script-src 'self' https://ssl.google-analytics.com; connect-src https://*.appspot.com; img-src 'self' http://www.google-analytics.com"
+  "icons": { 
+  	"16": "icon_16.png",
+        "48": "icon_48.png",
+        "128": "icon_128.png" },
+  "content_scripts": [
+        {
+            "matches":
+                [
+                "*://wam-mobile.appspot.com/facebook/*"
+                ],
+            "js": ["awesome.js"],
+            "run_at": "document_idle",
+            "all_frames": true
+        }
+    ],
+  "web_accessible_resources": ["inline.js"],
+  "manifest_version": 2
 }
-
